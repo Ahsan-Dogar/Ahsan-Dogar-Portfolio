@@ -1,192 +1,221 @@
-<a name="readme-top"></a>
+# 3D Portfolio Website
 
-# Modern Space Theme Portfolio using Next.js 14 and Three.js
+A professional front-end developer portfolio website with modern 3D animations and interactive effects.
 
-![Modern Space Theme Portfolio using Next.js 14 and Three.js](/.github/images/img_main.png "Modern Space Theme Portfolio using Next.js 14 and Three.js")
+## 🚀 Features
 
-[![Ask Me Anything!](https://flat.badgen.net/static/Ask%20me/anything?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy "Ask Me Anything!")
-[![GitHub license](https://flat.badgen.net/github/license/sanidhyy/space-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/space-portfolio/blob/main/LICENSE "GitHub license")
-[![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/space-portfolio/commits/main "Maintenance")
-[![GitHub branches](https://flat.badgen.net/github/branches/sanidhyy/space-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/space-portfolio/branches "GitHub branches")
-[![Github commits](https://flat.badgen.net/github/commits/sanidhyy/space-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/space-portfolio/commits "Github commits")
-[![GitHub issues](https://flat.badgen.net/github/issues/sanidhyy/space-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/space-portfolio/issues "GitHub issues")
-[![GitHub pull requests](https://flat.badgen.net/github/prs/sanidhyy/space-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/space-portfolio/pulls "GitHub pull requests")
-[![Netlify Status](https://api.netlify.com/api/v1/badges/451ed0e0-3541-474e-896a-4987e30a7722/deploy-status)](https://spaceportfolio.netlify.app/ "Netlify Status")
+### ✨ Modern Tech Stack
+- **React 18** with TypeScript
+- **Vite** for blazing fast development
+- **Tailwind CSS** with dark theme
+- **Three.js** for stunning 3D graphics
+- **Framer Motion** for smooth animations
+- **React Router** for navigation
+- **Lucide React** icons
 
-<!-- Table of Contents -->
-<details>
+### 🎨 8 Core Sections
+1. **Navigation** - Sticky header with smooth scroll links
+2. **Hero Section** - 3D animated background with rotating particles
+3. **About** - Professional background with social links
+4. **Skills** - Interactive 3D rotating skill badges
+5. **Projects** - 3D card flip animations on hover
+6. **Experience** - Animated timeline with work history
+7. **Contact** - Form with validation and visual feedback
+8. **Footer** - Complete footer with links
 
-<summary>
+### 🎭 3D Animation Features
 
-# :notebook_with_decorative_cover: Table of Contents
+#### Three.js Elements
+- Animated 3D particle field background
+- Rotating 3D cubes in hero section
+- Interactive 3D skill badges that rotate on hover
+- Mouse-responsive 3D card effects
 
-</summary>
+#### Framer Motion Animations
+- Smooth scroll-reveal animations
+- Fade-in and slide-in transitions
+- Staggered list animations
+- Hover effects on interactive elements
+- Card flip animations
+- Loading spinners
 
-- [Folder Structure](#bangbang-folder-structure)
-- [Getting Started](#toolbox-getting-started)
-- [Screenshots](#camera-screenshots)
-- [Tech Stack](#gear-tech-stack)
-- [Stats](#wrench-stats)
-- [Contribute](#raised_hands-contribute)
-- [Acknowledgements](#gem-acknowledgements)
-- [Buy Me a Coffee](#coffee-buy-me-a-coffee)
-- [Follow Me](#rocket-follow-me)
-- [Learn More](#books-learn-more)
-- [Deploy on Vercel](#page_with_curl-deploy-on-vercel)
-- [Give A Star](#star-give-a-star)
-- [Star History](#star2-star-history)
-- [Give A Star](#star-give-a-star)
+### 🎨 Design System
 
-</details>
+**Dark Theme Colors:**
+- Background: `#0f172a`
+- Secondary: `#1e293b`
+- Accent Cyan: `#06b6d4`
+- Accent Purple: `#a855f7`
+- Text Primary: `#f1f5f9`
+- Text Secondary: `#94a3b8`
 
-## :bangbang: Folder Structure
+**Features:**
+- Fully responsive (mobile-first approach)
+- Max-width container: 1200px
+- Smooth transitions (300-500ms)
+- Custom scrollbar styling
+- Professional spacing and alignment
 
-Here is the folder structure of this app.
+## 🛠️ Installation
 
 ```bash
-space-portfolio/
-  |- app/
-    |-- favicon.ico
-    |-- globals.css
-    |-- layout.tsx
-    |-- page.tsx
-  |- components/
-    |-- main/
-        |--- encryption.tsx
-        |--- footer.tsx
-        |--- hero.tsx
-        |--- navbar.tsx
-        |--- projects.tsx
-        |--- skills.tsx
-        |--- star-background.tsx
-    |-- sub/
-        |--- hero-content.tsx
-        |--- project-card.tsx
-        |--- skill-data-provider.tsx
-        |--- skill-text.tsx
-  |- config/
-    |-- index.ts
-  |- constants/
-    |-- index.ts
-  |- lib/
-    |-- motion.ts
-    |-- utils.ts
-  |- public/
-    |-- projects/
-    |-- skills/
-    |-- videos/
-    |-- hero-bg.svg
-    |-- lock-main.png
-    |-- lock-top.png
-    |-- logo.png
-  |- .eslintrc.json
-  |- .gitignore
-  |- next.config.js
-  |- package-lock.json
-  |- package.json
-  |- postcss.config.js
-  |- tailwind.config.ts
-  |- tsconfig.json
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Run linter
+npm run lint
 ```
 
-<br />
+## 📁 Project Structure
 
-## :toolbox: Getting Started
+```
+portfolio-3d/
+├── src/
+│   ├── components/
+│   │   ├── Navigation.tsx       # Sticky navigation bar
+│   │   ├── Hero.tsx            # Hero section with CTA
+│   │   ├── ThreeBackground.tsx # 3D particle background
+│   │   ├── About.tsx           # About section
+│   │   ├── Skills.tsx          # Skills showcase
+│   │   ├── SkillBadge3D.tsx    # 3D skill badge component
+│   │   ├── Projects.tsx        # Projects gallery
+│   │   ├── Experience.tsx      # Experience timeline
+│   │   ├── Contact.tsx         # Contact form
+│   │   └── Footer.tsx          # Footer
+│   ├── lib/
+│   │   └── utils.ts            # Utility functions
+│   ├── App.tsx                 # Main app component
+│   ├── main.tsx                # Entry point
+│   └── index.css               # Global styles
+├── public/
+│   └── vite.svg                # Favicon
+├── index.html
+├── vite.config.ts
+├── tailwind.config.ts
+├── tsconfig.json
+└── package.json
+```
 
-1. Make sure **Git** and **NodeJS** is installed.
+## 🎯 Key Technologies
 
-2. Clone this repository to your local computer.
+### Dependencies
+- **react** & **react-dom**: Core React libraries
+- **three**: 3D graphics library
+- **@react-three/fiber**: React renderer for Three.js
+- **@react-three/drei**: Useful helpers for React Three Fiber
+- **framer-motion**: Animation library
+- **react-hook-form**: Form handling
+- **zod**: Schema validation
+- **lucide-react**: Icon library
+- **react-intersection-observer**: Scroll animations
+- **tailwind-merge** & **clsx**: Utility class management
 
-3. Open terminal in root directory. Run `npm install --legacy-peer-deps` or `yarn install --legacy-peer-deps`.
+### Dev Dependencies
+- **@vitejs/plugin-react**: Vite React plugin
+- **typescript**: Type checking
+- **tailwindcss**: Utility-first CSS
+- **eslint**: Code linting
+- **@typescript-eslint**: TypeScript ESLint rules
 
-4. Now app is fully configured 👍 and you can start using this app using `npm run dev` or `yarn dev`.
+## 🎨 Customization
 
-## :camera: Screenshots:
+### Updating Content
 
-![Modern UI/UX](/.github/images/img1.png "Modern UI/UX")
+1. **Personal Information**: Edit contact details in `Contact.tsx` and `Footer.tsx`
+2. **Social Links**: Update URLs in `About.tsx` and `Footer.tsx`
+3. **Skills**: Modify skill categories and items in `Skills.tsx`
+4. **Projects**: Add your projects in `Projects.tsx`
+5. **Experience**: Update work history in `Experience.tsx`
 
-![Showcase your skills](/.github/images/img2.png "Showcase your skills")
+### Styling
 
-![Built with Typescript](/.github/images/img3.png "Built with Typescript")
+All colors are defined in `tailwind.config.ts`. Update the theme to match your brand:
 
-![Showcase your projects](/.github/images/img4.png "Showcase your projects")
+```typescript
+colors: {
+  background: '#0f172a',    // Main background
+  secondary: '#1e293b',     // Secondary background
+  accent: {
+    cyan: '#06b6d4',        // Primary accent
+    purple: '#a855f7',      // Secondary accent
+  },
+  // ... more colors
+}
+```
 
-## :gear: Tech Stack
+## 📱 Responsive Design
 
-[![React JS](https://skillicons.dev/icons?i=react "React JS")](https://react.dev/ "React JS") [![Next JS](https://skillicons.dev/icons?i=next "Next JS")](https://nextjs.org/ "Next JS") [![Typescript](https://skillicons.dev/icons?i=ts "Typescript")](https://www.typescriptlang.org/ "Typescript") [![Tailwind CSS](https://skillicons.dev/icons?i=tailwind "Tailwind CSS")](https://tailwindcss.com/ "Tailwind CSS") [![Netlify](https://skillicons.dev/icons?i=netlify "Netlify")](https://netlify.app/ "Netlify") [![Three.js](https://skillicons.dev/icons?i=threejs "Three.js")](https://threejs.org/ "Three.js")
+The portfolio is fully responsive with breakpoints:
+- Mobile: < 768px
+- Tablet: 768px - 1024px
+- Desktop: > 1024px
 
-## :wrench: Stats
+## 🚀 Deployment
 
-[![Stats for Space Portfolio](/.github/images/stats.svg "Stats for Space Portfolio")](https://pagespeed.web.dev/analysis/https-spaceportfolio-netlify-app/2efbmg117d "Stats for Space Portfolio")
+### Build for Production
 
-## :raised_hands: Contribute
+```bash
+npm run build
+```
 
-You might encounter some bugs while using this app. You are more than welcome to contribute. Just submit changes via pull request and I will review them before merging. Make sure you follow community guidelines.
+The optimized files will be in the `dist/` directory.
 
-## :gem: Acknowledgements
+### Deploy to Vercel
 
-Useful resources and dependencies that are used in Space Portfolio.
+```bash
+# Install Vercel CLI
+npm i -g vercel
 
-- [@heroicons/react](https://www.npmjs.com/package/@heroicons/react): ^2.1.1
-- [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^9.93.0
-- [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^8.15.13
-- [clsx](https://www.npmjs.com/package/clsx): ^2.1.0
-- [framer-motion](https://www.npmjs.com/package/framer-motion): ^10.17.12
-- [next](https://www.npmjs.com/package/next): 14.0.4
-- [react](https://www.npmjs.com/package/react): ^18
-- [react-dom](https://www.npmjs.com/package/react-dom): ^18
-- [react-icons](https://www.npmjs.com/package/react-icons): ^5.0.1
-- [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer): ^9.5.3
-- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^2.2.0
-- [three](https://www.npmjs.com/package/three): ^0.160.0
-- [@types/node](https://www.npmjs.com/package/@types/node): ^20
-- [@types/react](https://www.npmjs.com/package/@types/react): ^18
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^18
-- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.0.1
-- [eslint](https://www.npmjs.com/package/eslint): ^8
-- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 14.0.4
-- [postcss](https://www.npmjs.com/package/postcss): ^8
-- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
-- [typescript](https://www.npmjs.com/package/typescript): ^5
+# Deploy
+vercel
+```
 
-## :coffee: Buy Me a Coffee
+### Deploy to Netlify
 
-[<img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" width="200" />](https://www.buymeacoffee.com/sanidhy "Buy me a Coffee")
+1. Push to GitHub
+2. Connect repository to Netlify
+3. Build command: `npm run build`
+4. Publish directory: `dist`
 
-## :rocket: Follow Me
+## ⚡ Performance
 
-[![GitHub followers](https://img.shields.io/github/followers/sanidhyy?style=social&label=Follow&maxAge=2592000)](https://github.com/sanidhyy "Follow Me")
-[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FTechnicalShubam)](https://twitter.com/intent/tweet?text=Check+out+this+amazing+app:&url=https%3A%2F%2Fgithub.com%2Fsanidhyy%2Fspace-portfolio "Tweet")
-[![YouTube](https://img.shields.io/youtube/channel/subscribers/UCNAz_hUVBG2ZUN8TVm0bmYw)](https://www.youtube.com/@OPGAMER. "Subscribe my YouTube Channel")
+- **Optimized Bundle**: Code-splitting for faster load times
+- **Lazy Loading**: Components loaded on demand
+- **Three.js Optimization**: Efficient 3D rendering
+- **Image Optimization**: Compressed assets
+- **Minimal Dependencies**: Only essential packages
 
-## :books: Learn More
+## 🔒 Best Practices
 
-To learn more about Next.js, take a look at the following resources:
+- ✅ TypeScript for type safety
+- ✅ ESLint for code quality
+- ✅ Component-based architecture
+- ✅ Responsive design
+- ✅ Accessibility considerations
+- ✅ Performance optimizations
+- ✅ Clean code structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+MIT License - feel free to use this template for your own portfolio!
 
-## :page_with_curl: Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions, issues, and feature requests are welcome!
 
-Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## ⭐ Show Your Support
 
-## :star: Give A Star
+Give a ⭐️ if you like this project!
 
-You can also give this repository a star to show more people and they can use this repository.
+---
 
-## :star2: Star History
-
-<a href="https://star-history.com/#sanidhyy/space-portfolio&Timeline">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=sanidhyy/space-portfolio&type=Timeline&theme=dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=sanidhyy/space-portfolio&type=Timeline" />
-  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=sanidhyy/space-portfolio&type=Timeline" />
-</picture>
-</a>
-
-<br />
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+**Built with ❤️ using React, Three.js, and Framer Motion**
